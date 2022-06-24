@@ -36,12 +36,6 @@ app.get('/about', (req, res) => {
 })
 
 app.get('/help', (req, res) => {
-    console.log(req.query.key)
-    if(!req.query.key) {
-        return res.send({
-            error: 'there is no qurery'
-        })
-    }
     res.render('help', {
         message: 'for more help call me at 123456',
         title: 'Help',
